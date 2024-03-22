@@ -1,8 +1,7 @@
 from typing import List, Optional
 
 from langchain.agents import AgentExecutor
-from langchain.agents.agent_toolkits import \
-    create_conversational_retrieval_agent
+from langchain.agents.agent_toolkits import create_conversational_retrieval_agent
 from langchain.agents.openai_functions_agent.base import OpenAIFunctionsAgent
 from langchain.base_language import BaseLanguageModel
 from langchain.prompts import MessagesPlaceholder

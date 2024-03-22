@@ -1,8 +1,7 @@
 from typing import Dict, Union
 
 from langchain.evaluation import Criteria, load_evaluator
-from langchain.evaluation.schema import (EvaluatorType, LLMEvalChain,
-                                         StringEvaluator)
+from langchain.evaluation.schema import EvaluatorType  # , LLMEvalChain, StringEvaluator
 
 # more relevant to us
 _SUPPORTED_CRITERIA = {

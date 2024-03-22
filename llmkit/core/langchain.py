@@ -1,8 +1,8 @@
-
 from langchain import LLMChain, PromptTemplate
 from langchain.base_language import BaseLanguageModel
 from langchain.chains import ConversationalRetrievalChain, RetrievalQA
-from langchain.evaluation import Criteria, load_evaluator
+
+# from langchain.evaluation import Criteria, load_evaluator
 from langchain.memory.chat_memory import BaseChatMemory
 
 
@@ -31,5 +31,3 @@ def get_conversational_chain(
     return ConversationalRetrievalChain.from_llm(
         llm, retriever, memory=memory, return_source_documents=return_source_documents, verbose=True
     )
-
-

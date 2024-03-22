@@ -10,20 +10,23 @@ from transformers import (
     AutoTokenizer,
     LlamaForCausalLM,
     LlamaTokenizer,
+    PreTrainedTokenizer,
     StoppingCriteria,
     StoppingCriteriaList,
     TextStreamer,
     pipeline,
 )
 
-from llm_chatbot_devs.utils.config import Config
+from llmkit.utils.config import Config
 
 config = Config()
 
 
 # define custom stopping criteria object
 class StopOnTokens(StoppingCriteria):
-    def __init__(self, tokens: List[List[str]], tokenizer: AutoTokenizer, device: torch.device):
+    def __init__(
+        self, tokens: List[List[str]], tokenizer: PreTrainedTokenizer, device: torch.device
+    ):
         stop_token_ids = [tokenizer.convert_tokens_to_ids(t) for t in tokens]
         self.stop_token_ids = [
             torch.tensor(x, dtype=torch.long, device=device) for x in stop_token_ids

@@ -10,6 +10,4 @@ def get_langfuse_handler():
     Returns:
         _type_: _description_
     """
-    return CallbackHandler(
-        os.getenv('PUBLIC_KEY'), os.getenv('SECRET_KEY')
-    )
+    return CallbackHandler(os.getenv("PUBLIC_KEY"), os.getenv("SECRET_KEY"))
