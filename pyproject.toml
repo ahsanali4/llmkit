@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "llmkit"
+version = "0.1.0"
+description = ""
+authors = ["maa-k <ahsanali4152@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = "^2.6.4"
+openai = "^1.14.2"
+transformers = "^4.39.0"
+instructorembedding = "^1.0.1"
+pymupdf = "^1.24.0"
+pypdf = "^4.1.0"
+aleph-alpha-client = "^7.0.1"
+ocrmypdf = "^16.1.2"
+streamlit = "^1.32.2"
+sentence-transformers = "^2.5.1"
+langchain = "^0.1.13"
+langfuse = "^2.21.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
